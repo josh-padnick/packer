@@ -1,4 +1,4 @@
-package ebs
+package common
 
 import (
 	"fmt"

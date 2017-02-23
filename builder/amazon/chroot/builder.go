@@ -254,6 +254,7 @@ func (b *Builder) Run(ui packer.Ui, hook packer.Hook, cache packer.Cache) (packe
 		&StepRegisterAMI{
 			RootVolumeSize: b.config.RootVolumeSize,
 		},
+		&awscommon.stepCreateEncryptedAMICopy{},
 		&awscommon.StepAMIRegionCopy{
 			AccessConfig: &b.config.AccessConfig,
 			Regions:      b.config.AMIRegions,
